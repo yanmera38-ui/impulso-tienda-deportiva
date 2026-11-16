@@ -1,0 +1,638 @@
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F0E6;
+    color: #49372B;
+}
+
+
+/* =========================================
+   2. ENCABEZADO SUPERIOR
+   ========================================= */
+
+.encabezado {
+    background-color: #F5F0E6;
+    width: 100%;
+}
+
+.contenedor-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 3px;
+    transform: skewX(-12deg);
+
+    background: linear-gradient(
+        to bottom,
+        #FFFFFF 0%,
+        #C5CBD1 45%,
+        #737B83 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.logo p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #795B45;
+}
+
+.cuenta {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.cuenta a {
+    color: #795B45;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cuenta a:hover {
+    color: #D87532;
+}
+
+
+/* =========================================
+   3. BARRA DE NAVEGACIÓN
+   ========================================= */
+
+.navegacion {
+    background-color: #B85F2B;
+    padding: 12px 3%;
+    overflow-x: auto;
+}
+
+.navegacion table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.navegacion tr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.navegacion td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.navegacion a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.navegacion a:hover {
+    background-color: #75452E;
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   4. IMAGEN PRINCIPAL Y PORTADA
+   ========================================= */
+
+.portada {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #D9B58B;
+    text-align: center;
+
+    border-radius: 0 0 50% 50% / 0 0 10% 10%;
+}
+
+.portada-video {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+
+.portada-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-portada {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px #49372B;
+}
+
+.texto-portada h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.texto-portada p {
+    font-size: 19px;
+}
+
+
+/* =========================================
+   5. CONTENIDO PRINCIPAL
+   ========================================= */
+
+main {
+    width: 90%;
+    max-width: 1300px;
+    margin: 50px auto;
+}
+
+main h2 {
+    color: #9B4D25;
+    text-align: center;
+}
+
+main p {
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   6. CATEGORÍAS DE PRODUCTOS
+   ========================================= */
+
+.categorias {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.categorias h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.categorias > p {
+    color: #795B45;
+    margin-bottom: 35px;
+}
+
+.galeria-categorias {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.producto-categoria {
+    width: 170px;
+    text-align: center;
+}
+
+.producto-categoria img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #E2C7A5;
+    transition: transform 0.3s;
+}
+
+.producto-categoria img:hover {
+    transform: scale(1.08);
+}
+
+.producto-categoria h3 {
+    color: #9B4D25;
+    font-size: 17px;
+}
+
+.producto-categoria p {
+    font-size: 13px;
+    color: #795B45;
+}
+
+
+/* =========================================
+   7. BLOQUES PROMOCIONALES
+   ========================================= */
+
+.promociones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 60px 0;
+}
+
+.bloque-promocional {
+    background-color: #E8D7C0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+    padding-bottom: 25px;
+}
+
+.bloque-promocional img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.bloque-promocional h3 {
+    color: #9B4D25;
+}
+
+.bloque-promocional p {
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.bloque-promocional a {
+    display: inline-block;
+    background-color: #B85F2B;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.bloque-promocional a:hover {
+    background-color: #75452E;
+}
+
+
+/* =========================================
+   8. TABLA DE CATEGORÍAS
+   ========================================= */
+
+.tabla-categorias {
+    margin: 60px 0;
+}
+
+.tabla-categorias table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+}
+
+.tabla-categorias th {
+    background-color: #B85F2B;
+    color: white;
+    padding: 15px;
+}
+
+.tabla-categorias td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #D9BFA3;
+}
+
+.tabla-categorias tr:nth-child(even) {
+    background-color: #EFE3D2;
+}
+
+
+/* =========================================
+   9. FORMULARIOS DE LA TIENDA
+   ========================================= */
+
+.formularios-tienda {
+    text-align: center;
+    padding: 35px;
+    background-color: #E8D7C0;
+    border-radius: 12px;
+    margin: 50px 0;
+}
+
+.formularios-tienda button {
+    background-color: #B85F2B;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 22px;
+    margin: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formularios-tienda button:hover {
+    background-color: #75452E;
+}
+
+
+/* =========================================
+   10. PIE DE PÁGINA
+   ========================================= */
+
+.pie-pagina {
+    background-color: #49372B;
+    color: #F5F0E6;
+    padding: 45px 5% 15px;
+}
+
+.contenido-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pie-pagina h2,
+.pie-pagina h3 {
+    color: #E5B77D;
+}
+
+.pie-pagina ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pie-pagina li {
+    margin-bottom: 10px;
+}
+
+.pie-pagina a {
+    color: #F5F0E6;
+    text-decoration: none;
+}
+
+.pie-pagina a:hover {
+    color: #E5B77D;
+}
+
+.pie-pagina p {
+    line-height: 1.6;
+}
+
+.derechos {
+    text-align: center;
+    border-top: 1px solid #806A57;
+    margin-top: 35px;
+    padding-top: 15px;
+}
+
+
+/* =========================================
+   11. DISEÑO PARA CELULARES
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .contenedor-superior {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navegacion {
+        overflow-x: auto;
+    }
+
+    .navegacion table {
+        width: max-content;
+    }
+
+    .navegacion tr {
+        justify-content: flex-start;
+    }
+
+    .portada-video {
+        height: 300px;
+    }
+
+    .texto-portada h2 {
+        font-size: 25px;
+    }
+
+    .texto-portada p {
+        font-size: 15px;
+    }
+
+    .promociones {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-footer {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   12. CATÁLOGOS DE PRODUCTOS
+   ========================================= */
+
+/* CONTENEDORES DE LAS PÁGINAS INTERNAS */
+
+.contenido-pagina,
+.catalogo {
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto;
+}
+
+
+/* TÍTULOS */
+
+.contenido-pagina .titulo-pagina,
+.catalogo .introduccion-catalogo h1 {
+    color: #9B4D25;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.contenido-pagina .titulo-seccion,
+.catalogo .seccion-productos h2 {
+    color: #9B4D25;
+    text-align: center;
+    font-size: 25px;
+    margin: 45px 0 25px;
+}
+
+
+/* TABLAS DE PRODUCTOS */
+
+.contenido-pagina .tabla-productos {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 20px;
+    margin: 0 auto 40px;
+}
+
+.contenido-pagina .tabla-productos td {
+    width: 33.333%;
+    background-color: #E8D7C0;
+    border-radius: 12px;
+    padding: 18px 12px;
+    text-align: center;
+    vertical-align: top;
+}
+
+
+/* IMÁGENES DE LAS TABLAS */
+
+.contenido-pagina .tabla-productos img {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+/* PRECIOS DE LAS TABLAS */
+
+.contenido-pagina .tabla-productos p {
+    color: #9B4D25;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 12px 0 0;
+}
+
+
+/* GALERÍAS DE GIMNASIO */
+
+.catalogo .galeria-productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+
+/* TARJETAS DE PRODUCTOS */
+
+.catalogo .producto-card {
+    background-color: #E8D7C0;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* IMÁGENES DE LAS TARJETAS */
+
+.catalogo .producto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+/* NOMBRES Y PRECIOS */
+
+.catalogo .producto-card h3 {
+    color: #9B4D25;
+    font-size: 17px;
+}
+
+.catalogo .producto-card .precio {
+    color: #9B4D25;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* INTRODUCCIÓN DEL CATÁLOGO */
+
+.catalogo .introduccion-catalogo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.catalogo .introduccion-catalogo p {
+    color: #795B45;
+    font-size: 16px;
+}
+
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 768px) {
+
+    .catalogo .galeria-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .contenido-pagina .tabla-productos {
+        border-spacing: 8px;
+    }
+
+    .contenido-pagina .tabla-productos td {
+        padding: 10px 6px;
+    }
+
+    .contenido-pagina .tabla-productos img,
+    .catalogo .producto-card img {
+        height: 160px;
+    }
+
+    .contenido-pagina .titulo-pagina,
+    .catalogo .introduccion-catalogo h1 {
+        font-size: 26px;
+    }
+}
+
+
+/* ADAPTACIÓN A CELULARES PEQUEÑOS */
+
+@media (max-width: 480px) {
+
+    .catalogo .galeria-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-pagina .tabla-productos {
+        border-spacing: 5px;
+    }
+
+    .contenido-pagina .tabla-productos img,
+    .catalogo .producto-card img {
+        height: 130px;
+    }
+
+    .contenido-pagina .tabla-productos p,
+    .catalogo .producto-card .precio {
+        font-size: 14px;
+    }
+
+}
